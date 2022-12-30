@@ -93,7 +93,7 @@ export const Separator = styled.div`
   justify-content: center;
 `
 
-export const FormButton = styled.button`
+export const BaseFormButton = styled.button`
   width: 100%;
   border: none;
   padding: 1rem;
@@ -117,5 +117,21 @@ export const FormButton = styled.button`
 
   &:not(:disabled):hover {
     background: ${(props) => props.theme['green-700']};
+  }
+`
+
+export const FormButton = styled(BaseFormButton)`
+  background-color: ${(props) => props.theme['green-500']};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['green-700']};
+  }
+`
+
+export const StopButton = styled(BaseFormButton)`
+  background-color: ${(props) => props.theme['red-500']};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['red-700']};
   }
 `
