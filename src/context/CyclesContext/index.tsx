@@ -51,11 +51,11 @@ export function CyclesContextProvider({
       if (storedStateAsJson) {
         return JSON.parse(storedStateAsJson)
       }
+      return { cycles: [], activeCycleId: null }
     },
   )
 
   const { cycles, activeCycleId } = cyclesState
-
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(() => {
